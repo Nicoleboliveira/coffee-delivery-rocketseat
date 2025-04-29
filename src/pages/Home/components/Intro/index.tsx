@@ -14,31 +14,31 @@ export function Intro() {
         <main>
           <div>
             <span>
-              <p className="cart">
-                <ShoppingCart size={16} color="#FAFAFA" weight="fill" />
-              </p>
+              <div className="cart">
+                <ShoppingCart size={14} color="#FAFAFA" weight="fill" />
+              </div>
               Compra simples e segura
             </span>
 
             <span>
-              <p className="timer">
-                <Timer size={16} color="#FAFAFA" weight="fill" />
-              </p>
+              <div className="timer">
+                <Timer size={14} color="#FAFAFA" weight="fill" />
+              </div>
               Entrega rápida e rastreada
             </span>
           </div>
           <div>
             <span>
-              <p className="package">
-                <Package size={16} color="#FAFAFA" weight="fill" />
-              </p>
+              <div className="package">
+                <Package size={14} color="#FAFAFA" weight="fill" />
+              </div>
               Embalagem mantém o café intacto
             </span>
 
             <span>
-              <p className="coffee">
-                <Coffee size={16} color="#FAFAFA" weight="fill" />
-              </p>
+              <div className="coffee">
+                <Coffee size={14} color="#FAFAFA" weight="fill" />
+              </div>
               O café chega fresquinho até você
             </span>
           </div>

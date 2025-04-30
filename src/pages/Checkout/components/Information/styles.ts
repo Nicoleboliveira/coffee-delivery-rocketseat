@@ -170,8 +170,8 @@ export const InformationContainer = styled.header`
           gap: 12px;
           font-family: "Roboto", sans-serif;
           line-height: 1.3;
-          font-size: 12px;
-          font-weight: 400;
+          font-size: 10px;
+          font-weight: 600;
           color: ${(props) => props.theme["base-text"]};
           border: 1px solid transparent;
           transition: all 0.2s ease;

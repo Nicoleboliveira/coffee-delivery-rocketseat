@@ -66,7 +66,7 @@ export function Information() {
             <input type="radio" id="bank" name="payment" hidden />
             <label htmlFor="bank">
               <Bank size={16} color="#8047F8" weight="regular" />
-              TRANSFERÊNCIA BANCÁRIA
+              TRANSFERÊNCIA
             </label>
 
             <input type="radio" id="cash" name="payment" hidden />

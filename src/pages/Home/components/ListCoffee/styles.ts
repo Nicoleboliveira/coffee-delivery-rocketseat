@@ -6,6 +6,7 @@ export const ListCoffeContainer = styled.header`
 
   span {
     margin-bottom: 157px;
+
     h2 {
       font-family: "Baloo 2", sans-serif;
       color: ${(props) => props.theme["base-subtitle"]};
@@ -34,7 +35,6 @@ export const ListCoffeContainer = styled.header`
         text-align: center;
         opacity: 100%;
         gap: 12px;
-        width: auto;
 
         img {
           width: 120px;
@@ -42,9 +42,8 @@ export const ListCoffeContainer = styled.header`
           margin-top: -40px;
         }
 
-        div {
+        .tags {
           gap: 4px;
-
           h5 {
             background: ${(props) => props.theme["yellow-light"]};
             padding: 4px 8px;
@@ -81,6 +80,7 @@ export const ListCoffeContainer = styled.header`
           justify-content: center;
           align-items: center;
           margin-top: auto;
+          gap: 23px;
 
           .price {
             gap: 2px;
@@ -118,19 +118,42 @@ export const ListCoffeContainer = styled.header`
           }
 
           .btn-1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: ${(props) => props.theme["base-button"]};
             padding: 8px;
             gap: 4px;
             border-radius: 6px;
+            height: auto;
+          }
+          .minus,
+          .plus {
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .btn-1 span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-family: "Roboto", sans-serif;
             font-size: 16px;
             line-height: 1.3;
             color: ${(props) => props.theme["base-title"]};
+            padding: 0;
+            margin: 0;
           }
+
           .minus svg,
           .plus svg {
             color: ${(props) => props.theme["purple"]};
             transition: color 0.3s;
+            display: flex;
+            align-items: center;
           }
 
           .minus:hover svg,

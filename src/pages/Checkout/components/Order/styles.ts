@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const OrderContainer = styled.header`
-  span {
+  .content {
     display: grid;
+
     h2 {
       font-family: "Baloo 2", sans-serif;
       line-height: 1.3;
@@ -105,6 +106,66 @@ export const OrderContainer = styled.header`
           color: ${(props) => props.theme["base-text"]};
           display: flex;
         }
+      }
+
+      .container {
+        margin-top: 12px;
+
+        .information {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 12px;
+          p {
+            font-family: "Roboto", sans-serif;
+            font-size: 14px;
+            line-height: 1.3;
+            font-weight: 450;
+            color: ${(props) => props.theme["base-text"]};
+          }
+
+          h5 {
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            line-height: 1.3;
+            font-weight: 400;
+            color: ${(props) => props.theme["base-text"]};
+          }
+        }
+
+        .total {
+          margin-top: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          h4 {
+            font-family: "Roboto", sans-serif;
+            font-size: 20px;
+            line-height: 1.3;
+            font-weight: bold;
+            color: ${(props) => props.theme["base-text"]};
+          }
+        }
+      }
+      .confirm {
+        all: unset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 24px;
+        background-color: ${(props) => props.theme["yellow"]};
+        padding: 12px;
+        border-radius: 6px;
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        line-height: 1.3;
+        font-weight: bold;
+        color: ${(props) => props.theme["white"]};
+      }
+
+      .confirm:hover {
+        background-color: ${(props) => props.theme["yellow-dark"]};
       }
     }
   }

@@ -10,7 +10,7 @@ import {
 export function Information() {
   return (
     <InformationContainer>
-      <span>
+      <div className="content">
         <h2>Complete seu pedido</h2>
 
         <div className="address">
@@ -76,7 +76,7 @@ export function Information() {
             </label>
           </div>
         </div>
-      </span>
+      </div>
     </InformationContainer>
   );
 }

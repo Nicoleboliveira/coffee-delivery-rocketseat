@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const InformationContainer = styled.header`
-  span {
+  .content {
     display: grid;
 
     h2 {
@@ -170,7 +170,7 @@ export const InformationContainer = styled.header`
           gap: 12px;
           font-family: "Roboto", sans-serif;
           line-height: 1.3;
-          font-size: 10px;
+          font-size: 11px;
           font-weight: 600;
           color: ${(props) => props.theme["base-text"]};
           border: 1px solid transparent;

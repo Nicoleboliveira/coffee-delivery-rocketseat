@@ -3,7 +3,13 @@ import { CurrencyDollar, MapPin, Timer } from "phosphor-react";
 
 import order from "../../../../assets/Image-order-confirmed.svg";
 
-export function OrderConfirmed() {
+type OrderConfirmedProps = {
+  orderDetails: any;
+};
+
+export function OrderConfirmed({ orderDetails }: OrderConfirmedProps) {
+  const { address, paymentMethod } = orderDetails;
+
   return (
     <OrderConfirmedContainer>
       <div className="content">
@@ -20,11 +26,12 @@ export function OrderConfirmed() {
                   </div>
                   <div className="address">
                     <p>Entrega em</p>
-                    <h3>Rua João Daniel Martinelli,</h3>
-                    <h3>102 </h3>
-                    <p>Farrapos -</p>
-                    <p>Porto Alegre,</p>
-                    <p> RS</p>
+                    <h3>
+                      Rua {address.rua}, {address.numero}
+                    </h3>
+                    <p>
+                      {address.bairro} - {address.cidade}, {address.estado}
+                    </p>
                   </div>
                 </div>
 
@@ -44,7 +51,7 @@ export function OrderConfirmed() {
                   </div>
                   <div className="description">
                     <p>Pagamento na entrega</p>
-                    <h3>Cartão de Crédito</h3>
+                    <h3>{paymentMethod}</h3>
                   </div>
                 </div>
               </div>

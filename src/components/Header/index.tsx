@@ -2,8 +2,12 @@ import { HeaderContainer } from "./style";
 import { NavLink } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
 import { MapPin, ShoppingCart } from "phosphor-react";
+import { useCart } from "../../context/CartContext";
 
 export function Header() {
+  const { cart } = useCart();
+  const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+
   return (
     <HeaderContainer>
       <nav>
@@ -17,8 +21,8 @@ export function Header() {
           Porto Alegre, RS
         </span>
         <NavLink to="/checkout" title="Carrinho">
-          <nav>
-            <h3>1</h3>
+          <nav style={{ position: "relative" }}>
+            {totalQuantity > 0 && <h3>{totalQuantity}</h3>}
             <ShoppingCart size={19} color="#C47F17" weight="fill" />
           </nav>
         </NavLink>

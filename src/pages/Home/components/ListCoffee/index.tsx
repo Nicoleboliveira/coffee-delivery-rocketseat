@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
 import { ListCoffeContainer } from "./styles";
 import { coffees } from "./cofes";
+import { useCart } from "../../../../context/CartContext";
 
 export function ListCoffee() {
   const [quantities, setQuantities] = useState<{ [key: number]: number }>(
@@ -21,6 +22,8 @@ export function ListCoffee() {
       [id]: prev[id] > 1 ? prev[id] - 1 : 1,
     }));
   };
+
+  const { addToCart } = useCart();
   return (
     <ListCoffeContainer>
       <span>
@@ -58,7 +61,20 @@ export function ListCoffee() {
                       <Plus size={14} weight="bold" />
                     </button>
                   </div>
-                  <button className="btn-2">
+                  <button
+                    className="btn-2"
+                    onClick={() =>
+                      addToCart(
+                        {
+                          id: coffee.id,
+                          name: coffee.name,
+                          price: coffee.price,
+                          image: coffee.image,
+                        },
+                        quantities[coffee.id] // aqui usamos a quantidade correta
+                      )
+                    }
+                  >
                     <ShoppingCart size={20} color="#FAFAFA" weight="fill" />
                   </button>
                 </div>

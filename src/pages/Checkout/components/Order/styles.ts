@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const OrderContainer = styled.header`
   .content {
     display: grid;
+    min-width: 490px;
 
     h2 {
       font-family: "Baloo 2", sans-serif;
@@ -16,8 +17,26 @@ export const OrderContainer = styled.header`
       display: grid;
       background: ${(props) => props.theme["base-card"]};
       border-radius: 6px 44px 6px 44px;
-      padding: 8px 40px 40px;
+      padding: 8px 35px 40px;
       margin-top: 15px;
+      min-width: 348px;
+
+      .productsContainer {
+        max-height: 270px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: ${(props) => props.theme["base-button"]} transparent;
+
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: ${(props) => props.theme["base-button"]};
+          border-radius: 4px;
+        }
+      }
+
       .products {
         display: grid;
         grid-template-columns: 1fr 4fr 2fr;

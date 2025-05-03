@@ -11,7 +11,7 @@ export function Checkout() {
   const handleConfirmOrder = (address: any, paymentMethod: string) => {
     // Aqui você pode fazer a lógica de confirmação do pedido e salvar os dados
     setOrderDetails({ address, paymentMethod });
-    setPedidoConfirmado(true);
+    //setPedidoConfirmado(true);
   };
 
   // Verifica se os dados estão completos

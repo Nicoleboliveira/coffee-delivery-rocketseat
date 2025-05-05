@@ -5,6 +5,16 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   font-family: "Roboto", sans-serif;
   margin-bottom: 32px;
+  position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgb(250, 250, 250, 0.8);
+  align-items: center;
+  padding: 32px 160px 25px;
+  box-sizing: border-box;
 
   div {
     display: flex;

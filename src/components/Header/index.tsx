@@ -10,11 +10,11 @@ export function Header() {
 
   return (
     <HeaderContainer>
-      <nav>
+      <span>
         <NavLink to="/" title="Home">
           <img src={Logo} alt="" />
         </NavLink>
-      </nav>
+      </span>
       <div>
         <span>
           <MapPin size={22} color="#8047F8" weight="fill" />

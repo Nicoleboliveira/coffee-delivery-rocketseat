@@ -8,8 +8,13 @@ type OrderProps = {
 };
 
 export function Order({ isOrderDataComplete, onConfirmar }: OrderProps) {
-  const { cart, increaseQuantity, decreaseQuantity, removeFromCart } =
-    useCart();
+  const {
+    cart,
+    increaseQuantity,
+    decreaseQuantity,
+    removeFromCart,
+    clearCart,
+  } = useCart();
 
   const totalItems = cart.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -17,6 +22,12 @@ export function Order({ isOrderDataComplete, onConfirmar }: OrderProps) {
   );
   const delivery = cart.length > 0 ? 3.5 : 0;
   const total = totalItems + delivery;
+  const handleConfirmarPedido = () => {
+    onConfirmar();
+    clearCart();
+    // Atraso de 200ms para limpar o carrinho corretamente antes de navegar
+    setTimeout(() => {}, 200);
+  };
 
   return (
     <OrderContainer>
@@ -88,7 +99,7 @@ export function Order({ isOrderDataComplete, onConfirmar }: OrderProps) {
             <button
               type="button"
               className="confirm"
-              onClick={onConfirmar} // Confirma o pedido ao clicar
+              onClick={handleConfirmarPedido} // Confirma o pedido ao clicar
             >
               CONFIRMAR PEDIDO
             </button>
